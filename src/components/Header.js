@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const Header = () => {
     <View style={styles.container}>
-        <Text>{}</Text>
+        <Text>HEADER</Text>
     </View>
 }
 
@@ -16,3 +16,5 @@ const styles = StyleSheet.create({
 
 
 });
+
+export default Header;
