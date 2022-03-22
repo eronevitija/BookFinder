@@ -1,29 +1,40 @@
-import React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { AntDesign } from '@expo/vector-icons'; 
-import { TextInput } from "react-native";
+import React from 'react';
+import { View,StyleSheet,Text } from 'react-native';
+import { TextInput } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { useState } from 'react';
 
 
 const Searchbar = () => {
-  return(
-      <View style={styles.container}>
-          <AntDesign name="search1" size={25} color="black" />
-          <TextInput style={styles.txtInput} placeholder="search"/>
-      </View>
-  )
     
+    const [search, setSearch] = useState('');
+
+    return(
+        <View style={styles.container}> 
+            <AntDesign name="search1" size={20} color="black"/>
+            <TextInput style={styles.txtInput} placeholder="search" />
+
+
+        </View>
+    )
 };
 
 const styles = StyleSheet.create({
- container: {
-     backgroundColor: "#E9DAC1",
-     height:50,
-     borderRadius:5,
-     marginHorizontal:10,
- },
- txtInput: {
-     flex:1,
- }
+
+    container:{
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        margin:50,
+        
+    },
+    txtInput:{
+        flex:1,
+        height:40,
+        margin:12,
+        borderBottomWidth:1,
+
+    }
 });
 
 export default Searchbar;
