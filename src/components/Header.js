@@ -1,13 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+
 const Header = (props) => {
     return(
         <View style={styles.container}>
         <Text style={styles.txtTitle}>{props.title}</Text>
-    </View>
-    )
-}
+        </View>
+    )};
+
+
 
 const styles = StyleSheet.create({
 
@@ -26,8 +28,6 @@ const styles = StyleSheet.create({
         padding:10,
         fontSize:20
     }
-
-
 });
 
 export default Header;

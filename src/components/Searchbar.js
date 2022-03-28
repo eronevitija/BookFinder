@@ -1,7 +1,7 @@
 import React from 'react';
 import { View,StyleSheet,Text } from 'react-native';
 import { TextInput } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons'; 
 import { useState } from 'react';
 
 
@@ -11,9 +11,12 @@ const Searchbar = () => {
 
     return(
         <View style={styles.container}> 
-            <AntDesign name="search1" size={20} color="black"/>
-            <TextInput style={styles.txtInput} placeholder="search" />
+           <Ionicons name="search-sharp" size={24} color="black" style={styles.searchIcon} />
 
+            <TextInput style={styles.txtInput} placeholder="Search" />
+
+
+            
 
         </View>
     )
@@ -22,17 +25,32 @@ const Searchbar = () => {
 const styles = StyleSheet.create({
 
     container:{
+       display:'flex',
+       justifyContent:'center',
+       alignItems:'center',
+      
+    },
+    searchIcon:{
+        marginTop:50
+    },
+    txtInput:{
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        margin:50,
+        borderRadius:50,
+        border:'2px solid silver',
+        padding:5,
+        width:'40%'
         
-    },
-    txtInput:{
-        flex:1,
-        height:40,
-        margin:12,
-        borderBottomWidth:1,
+
+        
+        // marginLeft:10,
+        // width:'20%',
+        // fontSize:'20',
+        // flex:1,
+        // padding:10,
+        // borderRadius:50,
+        // border:'2px solid silver'
 
     }
 });
